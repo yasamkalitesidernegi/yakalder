@@ -139,6 +139,9 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.1); }
 .slide-bg-1 { background: linear-gradient(135deg,#1a2a4a 0%,#2d4a7a 40%,#3a6b9a 100%); }
 .slide-bg-2 { background: linear-gradient(135deg,#1a3a2a 0%,#2d5a3d 40%,#4a8a5a 100%); }
 .slide-bg-3 { background: linear-gradient(135deg,#3a1a4a 0%,#5a2d7a 40%,#7a4a9a 100%); }
+.slide-bg-video { position:absolute; inset:0; overflow:hidden; }
+.slide-bg-video video { width:100%; height:100%; object-fit:cover; }
+.slide-bg-video::after { content:''; position:absolute; inset:0; background:rgba(10,18,35,0.52); }
 .geo-shapes { position: absolute; inset: 0; overflow: hidden; }
 .geo { position: absolute; border-radius: 4px; opacity: .14; animation: geoFloat 8s ease-in-out infinite; }
 .geo-1 { width:200px;height:200px;background:var(--c-blue);  top:10%;right:15%;animation-delay:0s;   transform:rotate(15deg); }
@@ -571,7 +574,23 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
         </div>
       </div>
     </div>
-    <div class="slider-dots"><div class="dot active" onclick="goToSlide(0)"></div><div class="dot" onclick="goToSlide(1)"></div><div class="dot" onclick="goToSlide(2)"></div></div>
+    <div class="slide" id="slide-3">
+      <div class="slide-bg slide-bg-video">
+        <video autoplay muted loop playsinline>
+          <source src="dernek binamız.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="slide-content">
+        <span class="slide-eyebrow" data-tr="Derneğimiz" data-en="Our Association">Derneğimiz</span>
+        <h1 class="slide-title" data-tr="Yaşam Kalitesinin <em>Kalbindeyiz</em>" data-en="At the Heart of <em>Quality of Life</em>">Yaşam Kalitesinin <em>Kalbindeyiz</em></h1>
+        <p class="slide-desc" data-tr="Çanakkale'deki dernek binamızda araştırma, eğitim ve topluluk faaliyetleri sürdürüyoruz." data-en="We carry out research, training and community activities at our association building in Çanakkale.">Çanakkale'deki dernek binamızda araştırma, eğitim ve topluluk faaliyetleri sürdürüyoruz.</p>
+        <div class="hero-btns">
+          <a href="gallery.html" class="btn-hero-primary" data-tr="Galeriye Git" data-en="View Gallery">Galeriye Git</a>
+          <a href="#" class="btn-hero-outline" onclick="showPage('corporate');return false;" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider-dots"><div class="dot active" onclick="goToSlide(0)"></div><div class="dot" onclick="goToSlide(1)"></div><div class="dot" onclick="goToSlide(2)"></div><div class="dot" onclick="goToSlide(3)"></div></div>
     <div class="slider-arrows"><button class="arrow-btn" onclick="prevSlide()">&#8592;</button><button class="arrow-btn" onclick="nextSlide()">&#8594;</button></div>
   </div>
 
