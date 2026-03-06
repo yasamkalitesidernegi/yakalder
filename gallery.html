@@ -146,10 +146,9 @@ footer{background:#111120;color:rgba(255,255,255,.45);padding:2rem 0;text-align:
 
 <div class="toolbar">
   <div class="filter-tabs" id="filterTabs">
-    <button class="tab-btn active" onclick="filterCat('all')">Tümü (26)</button>
-    <button class="tab-btn" onclick="filterCat('Kişiler')">👥 Kişiler (7)</button>
-    <button class="tab-btn" onclick="filterCat('Etkinlikler')">📸 Etkinlikler (16)</button>
-    <button class="tab-btn" onclick="filterCat('Konferanslar')">🎤 Konferanslar (3)</button>
+    <button class="tab-btn active" onclick="filterCat('all')" id="tabAll">Tümü</button>
+    <button class="tab-btn" onclick="filterCat('Faaliyetler')" id="tabFaaliyetler">📸 Faaliyetler</button>
+    <button class="tab-btn" onclick="filterCat('Video')" id="tabVideo">▶ Video</button>
   </div>
   <div class="view-btns">
     <button class="view-btn active" id="vgrid"     onclick="setView('grid')"    title="Grid">⊞</button>
