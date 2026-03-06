@@ -183,9 +183,23 @@ footer{background:#111120;color:rgba(255,255,255,.45);padding:2rem 0;text-align:
 </footer>
 
 <script>
-const CATS = {"Kişiler": [{"title": "images (1)", "url": "https://yakalder.org/wp-content/uploads/2025/03/images-1.jpeg"}, {"title": "ÖZGE", "url": "https://yakalder.org/wp-content/uploads/2025/03/OZGE-1.jpeg"}, {"title": "özge-2", "url": "https://yakalder.org/wp-content/uploads/2025/03/ozge-2.jpg"}, {"title": "FİSUN", "url": "https://yakalder.org/wp-content/uploads/2025/03/FISUN.jpg"}, {"title": "SERAP SERBES", "url": "https://yakalder.org/wp-content/uploads/2025/03/SERAP-SERBES.jpg"}, {"title": "NEŞE", "url": "https://yakalder.org/wp-content/uploads/2025/03/NESE.jpg"}, {"title": "ÖMER", "url": "https://yakalder.org/wp-content/uploads/2025/03/OMER.jpg"}], "Etkinlikler": [{"title": "BANNER LOGO", "url": "https://yakalder.org/wp-content/uploads/2025/03/BANNER_LOGO-removebg-preview-1.png"}, {"title": "images (2)", "url": "https://yakalder.org/wp-content/uploads/2025/03/images-2.jpeg"}, {"title": "554bf461", "url": "https://yakalder.org/wp-content/uploads/2025/03/554bf461-a2f-2.jpeg"}, {"title": "yakalder", "url": "https://yakalder.org/wp-content/uploads/2025/03/yakalder-2.jpg"}, {"title": "0d4ebfa4", "url": "https://yakalder.org/wp-content/uploads/2025/03/0d4ebfa4-223.jpg"}, {"title": "1b5e7cc2", "url": "https://yakalder.org/wp-content/uploads/2025/03/1b5e7cc2-79f.jpg"}, {"title": "7f5e4e8b", "url": "https://yakalder.org/wp-content/uploads/2025/03/7f5e4e8b-53e.jpg"}, {"title": "40ba2944", "url": "https://yakalder.org/wp-content/uploads/2025/03/40ba2944-b5e.jpg"}, {"title": "80fdebc5", "url": "https://yakalder.org/wp-content/uploads/2025/03/80fdebc5-6cb.jpg"}, {"title": "805694b2", "url": "https://yakalder.org/wp-content/uploads/2025/03/805694b2-fee.jpg"}, {"title": "25850608", "url": "https://yakalder.org/wp-content/uploads/2025/03/25850608-423.jpg"}, {"title": "Etkinlik 1", "url": "https://yakalder.org/wp-content/uploads/2025/03/467751304_8386367628155315_2263028552396129654_n.jpg"}, {"title": "Etkinlik 2", "url": "https://yakalder.org/wp-content/uploads/2025/03/467758844_8386367631488648_1498514050604838039_n.jpg"}, {"title": "Etkinlik 3", "url": "https://yakalder.org/wp-content/uploads/2025/03/467846242_8386367621488649_2776287047962125866_n.jpg"}, {"title": "f7a3e7d0", "url": "https://yakalder.org/wp-content/uploads/2025/03/f7a3e7d0-6cd.jpg"}, {"title": "Sunu2", "url": "https://yakalder.org/wp-content/uploads/2025/03/Sunu2.gif"}], "Konferanslar": [{"title": "IQLC 2025", "url": "https://yakalder.org/wp-content/uploads/2025/09/iqlc2025-1-scaled.png"}, {"title": "ICDAH 2025 Poster", "url": "https://yakalder.org/wp-content/uploads/2025/09/ICDAH2025-POSTER-scaled.png"}, {"title": "ICLA 2025 Poster", "url": "https://yakalder.org/wp-content/uploads/2025/09/icla2025-poster.png"}]};
+const CATS = {
+  "Faaliyetler": [
+    {"title": "Galeri 1",       "url": "galeri 1.png"},
+    {"title": "Galeri 2",       "url": "galeri 2.png"},
+    {"title": "Folklor",        "url": "folklor.jpg"},
+    {"title": "Kurucular",      "url": "kurucular.jpeg"},
+    {"title": "Panel",          "url": "panel 2.jpg"},
+    {"title": "Yoga",           "url": "yoga (2).jpg"},
+    {"title": "Yoga 2",         "url": "yoga.jpg"},
+    {"title": "Sunum",          "url": "Sunu1.gif"}
+  ],
+  "Video": [
+    {"title": "Dernek Binamız", "url": "dernek binamız.mp4", "type": "video"}
+  ]
+};
 
-const CAT_COLORS = {
+const CAT_COLORS = {"Faaliyetler":"#6BA3C8","Video":"#E8973A",
   'Kişiler':     '#6BA3C8',
   'Etkinlikler': '#E8973A',
   'Konferanslar':'#5BB8CC',
@@ -223,25 +237,29 @@ function setView(v) {
 function imgCard(img, idx) {
   const name = img.title || getFilename(img.url);
   const path = getFilename(img.url);
+  const isVideo = img.type === 'video';
+  const thumb = isVideo
+    ? `<video src="${img.url}" muted loop playsinline style="width:100%;height:100%;object-fit:cover;" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;color:white;font-size:1rem;pointer-events:none;">▶</div>`
+    : `<img src="${img.url}" alt="${name}" loading="lazy" onerror="this.src='';this.style.background='#e8e4dc'">`;
   if (currentView === 'list') {
     return `<div class="list-item" onclick="openLightbox(${idx})">
-      <img class="list-thumb" src="${img.url}" alt="${name}" loading="lazy" onerror="this.style.background='#e8e4dc';this.src=''">
-      <div class="list-info"><div class="list-name">${name}</div><div class="list-url">${img.url}</div></div>
+      <img class="list-thumb" src="${isVideo ? '' : img.url}" alt="${name}" loading="lazy" onerror="this.style.background='#e8e4dc';this.src=''">
+      <div class="list-info"><div class="list-name">${isVideo ? '▶ ' : ''}${name}</div><div class="list-url">${img.url}</div></div>
       <a class="list-open" href="${img.url}" target="_blank" onclick="event.stopPropagation()">Aç →</a>
     </div>`;
   }
   if (currentView === 'masonry') {
-    return `<div class="masonry-item" onclick="openLightbox(${idx})">
-      <img src="${img.url}" alt="${name}" loading="lazy" onerror="this.src='';this.style.height='120px';this.style.background='#e8e4dc'">
-      <div class="img-meta"><div class="name">${name}</div><div class="path">${path}</div></div>
+    return `<div class="masonry-item" onclick="openLightbox(${idx})" style="position:relative;">
+      ${thumb}
+      <div class="img-meta"><div class="name">${isVideo ? '▶ ' : ''}${name}</div><div class="path">${path}</div></div>
     </div>`;
   }
   return `<div class="img-card" onclick="openLightbox(${idx})">
-    <div class="img-wrap">
-      <img src="${img.url}" alt="${name}" loading="lazy" onerror="this.src='';this.style.background='#e8e4dc'">
+    <div class="img-wrap" style="position:relative;">
+      ${thumb}
       <div class="img-overlay">🔍</div>
     </div>
-    <div class="img-meta"><div class="name">${name}</div><div class="path">${path}</div></div>
+    <div class="img-meta"><div class="name">${isVideo ? '▶ ' : ''}${name}</div><div class="path">${path}</div></div>
   </div>`;
 }
 
@@ -283,7 +301,16 @@ function updateLightbox() {
   const img = lbImages[lbIndex];
   if (!img) return;
   const name = img.title || getFilename(img.url);
-  document.getElementById('lbImg').src = img.url;
+  const lbImg = document.getElementById('lbImg');
+  if (img.type === 'video') {
+    lbImg.outerHTML = `<video id="lbImg" src="${img.url}" controls autoplay style="max-width:90vw;max-height:80vh;border-radius:8px;box-shadow:0 24px 64px rgba(0,0,0,.5);display:block;margin:0 auto;"></video>`;
+  } else {
+    const el = document.getElementById('lbImg');
+    if (el.tagName === 'VIDEO') {
+      el.outerHTML = `<img class="lightbox-img" id="lbImg" src="" alt="">`;
+    }
+    document.getElementById('lbImg').src = img.url;
+  }
   document.getElementById('lbCaption').textContent = name;
   document.getElementById('lbOpen').href = img.url;
   document.getElementById('lbDown').href = img.url;
