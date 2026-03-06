@@ -929,31 +929,37 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
     </div>
   </div>
 
-  <div class="inner-page" style="padding-top:3rem;padding-bottom:5rem;">
-    <div class="container" style="max-width:860px;">
+  <div class="inner-page" style="padding-top:2.5rem;padding-bottom:5rem;">
+    <div class="container" style="max-width:1100px;">
+      <div style="display:grid;grid-template-columns:220px 1fr;gap:2.5rem;align-items:start;">
 
-      <!-- TOC -->
-      <nav style="background:white;border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);margin-bottom:3rem;">
-        <p style="font-family:var(--font-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted);margin-bottom:1rem;">İçindekiler</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem .8rem;">
-          <a href="#st1"  style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 1 — Adı, Merkezi ve Logosu</a>
-          <a href="#st2"  style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 2 — Amacı</a>
-          <a href="#st3"  style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 3 — Çalışma Konuları</a>
-          <a href="#st4"  style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 4 — Faaliyet Alanı</a>
-          <a href="#st5"  style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 5 — Üye Olma Hakkı</a>
-          <a href="#st6"  style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 6 — Üyelik Türleri</a>
-          <a href="#st7"  style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 7 — Üyelikten Çıkma</a>
-          <a href="#st8"  style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 8 — Çıkarılma ve İtiraz</a>
-          <a href="#st9"  style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 9 — Hak ve Yükümlülükler</a>
-          <a href="#st10" style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 10 — Dernek Organları</a>
-          <a href="#st11" style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 11 — Genel Kurul</a>
-          <a href="#st14" style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 14 — Yönetim Kurulu</a>
-          <a href="#st15" style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 15 — Denetim Kurulu</a>
-          <a href="#st16" style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 16-17 — Disiplin Kurulu</a>
-          <a href="#st18" style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 18 — Gelir Kaynakları</a>
-          <a href="#st27" style="font-size:.88rem;color:var(--c-blue);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Md. 27 — Fesih ve Tasfiye</a>
-        </div>
-      </nav>
+        <!-- STICKY SIDEBAR TOC -->
+        <nav id="statute-toc" style="position:sticky;top:80px;background:white;border-radius:var(--radius);padding:1.5rem 1.25rem;box-shadow:var(--shadow);max-height:calc(100vh - 100px);overflow-y:auto;">
+          <p style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:1px solid rgba(0,0,0,.08);">İçindekiler</p>
+          <div style="display:flex;flex-direction:column;gap:.15rem;">
+            <a href="#st1"  class="toc-link">Md. 1 — Adı &amp; Merkezi</a>
+            <a href="#st2"  class="toc-link">Md. 2 — Amacı</a>
+            <a href="#st3"  class="toc-link">Md. 3 — Çalışma Konuları</a>
+            <a href="#st4"  class="toc-link">Md. 4 — Faaliyet Alanı</a>
+            <a href="#st5"  class="toc-link">Md. 5 — Üye Olma Hakkı</a>
+            <a href="#st6"  class="toc-link">Md. 6 — Üyelik Türleri</a>
+            <a href="#st7"  class="toc-link">Md. 7 — Çıkma</a>
+            <a href="#st8"  class="toc-link">Md. 8 — Çıkarılma</a>
+            <a href="#st9"  class="toc-link">Md. 9 — Hak &amp; Yükümlülük</a>
+            <a href="#st10" class="toc-link">Md. 10 — Organlar</a>
+            <a href="#st11" class="toc-link">Md. 11 — Genel Kurul</a>
+            <a href="#st14" class="toc-link">Md. 14 — Yönetim Krl.</a>
+            <a href="#st15" class="toc-link">Md. 15 — Denetim Krl.</a>
+            <a href="#st16" class="toc-link">Md. 16-17 — Disiplin Krl.</a>
+            <a href="#st18" class="toc-link">Md. 18 — Gelir Kaynakları</a>
+            <a href="#st19" class="toc-link">Md. 19-26 — Defterler</a>
+            <a href="#st27" class="toc-link">Md. 27 — Fesih</a>
+            <a href="#st28" class="toc-link">Md. 28 — Hüküm Eksikliği</a>
+          </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <div>
 
       <!-- MADDE 1 -->
       <div class="statute-article" id="st1">
@@ -1782,6 +1788,23 @@ document.querySelectorAll('.dropdown > a').forEach(a => {
     }
   });
 });
+
+/* ── STATUTE TOC active highlight ── */
+(function(){
+  const toc = document.getElementById('statute-toc');
+  if(!toc) return;
+  const links = toc.querySelectorAll('.toc-link');
+  const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+  function onScroll(){
+    let current = sections[0];
+    sections.forEach(s => { if(window.scrollY + 120 >= s.offsetTop) current = s; });
+    links.forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
 
 /* ── İLETİŞİM FORMU (Formspree) ── */
 async function submitContactForm() {
