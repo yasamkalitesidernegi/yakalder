@@ -495,9 +495,8 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
         <a href="#" data-tr="Kurumsal ▾" data-en="About ▾">Kurumsal ▾</a>
         <div class="dropdown-content">
           <a href="#" onclick="showPage('corporate');return false;"  data-tr="Dernek Hakkında"    data-en="About the Association">Dernek Hakkında</a>
-          <a href="#" onclick="showPage('board');return false;"      data-tr="Yönetim Kurulu"     data-en="Board of Directors">Yönetim Kurulu</a>
+          <a href="#" onclick="showPage('kurullar');return false;"   data-tr="Kurullar"           data-en="Boards">Kurullar</a>
           <a href="#" onclick="showPage('founders');return false;"   data-tr="Kurucular"          data-en="Founders">Kurucular</a>
-          <a href="#" onclick="showPage('audit');return false;"      data-tr="Denetim Kurulları"  data-en="Audit Boards">Denetim Kurulları</a>
           <a href="#" onclick="showPage('statute');return false;"    data-tr="Tüzüğümüz"          data-en="Our Statute">Tüzüğümüz</a>
           <a href="#" onclick="showPage('members');return false;"    data-tr="Üyelerimiz"         data-en="Our Members">Üyelerimiz</a>
         </div>
@@ -696,7 +695,7 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
         </div>
       </div>
       <div class="text-center" style="margin-top:2rem;">
-        <a href="#" class="btn-nav btn-nav-member" onclick="showPage('board');return false;" data-tr="Tüm Yönetim Kurulu →" data-en="Full Board →">Tüm Yönetim Kurulu →</a>
+        <a href="#" class="btn-nav btn-nav-member" onclick="showPage('kurullar');return false;" data-tr="Tüm Kurullar →" data-en="All Boards →">Tüm Kurullar →</a>
       </div>
     </div>
   </section>
@@ -856,17 +855,49 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
 <!-- ============================================================
      BOARD PAGE
      ============================================================ -->
-<div id="page-board" class="page-section">
-  <div class="page-hero"><div class="container"><span class="section-eyebrow" data-tr="Yönetim" data-en="Management">Yönetim</span><h1 class="section-title" data-tr="Yönetim Kurulu" data-en="Board of Directors">Yönetim Kurulu</h1></div></div>
+<div id="page-kurullar" class="page-section">
+  <div class="page-hero"><div class="container"><span class="section-eyebrow" data-tr="Yönetim &amp; Denetim" data-en="Management &amp; Oversight">Yönetim &amp; Denetim</span><h1 class="section-title" data-tr="Kurullar" data-en="Boards">Kurullar</h1></div></div>
   <div class="inner-page" style="padding-top:3rem;">
     <div class="container">
-      <div class="board-grid">
+
+      <!-- YÖNETİM KURULU -->
+      <div style="margin-bottom:1rem;">
+        <span class="section-eyebrow">Yönetim Kurulu</span>
+      </div>
+      <div class="board-grid" style="margin-top:1rem;">
         <div class="board-card"><img class="board-avatar" src="ozge.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="board-avatar-ph" style="display:none;">👩‍💼</div><div class="board-name">Prof. Dr. Özge UYSAL ŞAHİN</div><div class="board-role" data-tr="Kurucu Başkan" data-en="Founding President">Kurucu Başkan</div><p style="font-size:.78rem;color:var(--c-muted);margin-top:.75rem;line-height:1.5;"><a href="/cdn-cgi/l/email-protection#acd5cddfcdc1c7cdc0c5d8c9dfc5c8c9dec2c9cbc5eccbc1cdc5c082cfc3c1" style="color:var(--c-blue);"><span class="__cf_email__" data-cfemail="1b627a687a76707a77726f7e68727f7e69757e7c725b7c767a727735787476">[email&#160;protected]</span></a><br><a href="https://avesis.comu.edu.tr/ozge" target="_blank" style="color:var(--c-blue);">avesis.comu.edu.tr/ozge</a></p></div>
         <div class="board-card"><img class="board-avatar" src="FISUN.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="board-avatar-ph" style="display:none;">👩</div><div class="board-name">S. Fisun BAŞAK</div><div class="board-role" data-tr="Başkan Yardımcısı" data-en="Vice President">Başkan Yardımcısı</div></div>
         <div class="board-card"><img class="board-avatar" src="SERAP SERBES.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="board-avatar-ph" style="display:none;">👩</div><div class="board-name">Serap SERBES</div><div class="board-role" data-tr="Başkan Yardımcısı" data-en="Vice President">Başkan Yardımcısı</div></div>
         <div class="board-card"><img class="board-avatar" src="NEŞE.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="board-avatar-ph" style="display:none;">👩</div><div class="board-name">Neşe ALACA</div><div class="board-role" data-tr="Yönetim Kurulu Üyesi" data-en="Board Member">Yönetim Kurulu Üyesi</div></div>
-        <div class="board-card"><div class="board-avatar-ph">👨</div><div class="board-name">Serkan SERBES</div><div class="board-role" data-tr="Yönetim Kurulu Üyesi" data-en="Board Member">Yönetim Kurulu Üyesi</div></div>
+        <div class="board-card"><img class="board-avatar" src="ÖMER.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="board-avatar-ph" style="display:none;">👨</div><div class="board-name">Ömer ŞAHİN</div><div class="board-role" data-tr="Yönetim Kurulu Üyesi" data-en="Board Member">Yönetim Kurulu Üyesi</div></div>
       </div>
+
+      <!-- AYIRICI -->
+      <div style="margin:4rem 0 3rem; border-top:2px solid rgba(0,0,0,.07); position:relative;">
+        <span style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--c-light);padding:0 1.5rem;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-muted);">Denetim &amp; Disiplin</span>
+      </div>
+
+      <!-- DENETİM KURULU + DİSİPLİN KURULU -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:780px;">
+
+        <!-- Denetim Kurulu -->
+        <div style="background:white;border-radius:var(--radius);padding:2rem;border:1px solid rgba(0,0,0,.06);border-top:4px solid var(--c-blue);">
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;color:var(--c-dark);margin-bottom:1.5rem;" data-tr="Denetim Kurulu" data-en="Audit Board">Denetim Kurulu</h3>
+          <p style="margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:var(--c-blue);flex-shrink:0;"></span><strong>Ahmet MANTAŞ</strong></p>
+          <p style="margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:var(--c-muted);opacity:.4;flex-shrink:0;"></span><strong>Hasan KART</strong> — <span style="color:var(--c-muted);font-size:.83rem;" data-tr="Üye" data-en="Member">Üye</span></p>
+          <p style="display:flex;align-items:center;gap:.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:var(--c-muted);opacity:.4;flex-shrink:0;"></span><strong>Tülay ŞAHİN</strong> — <span style="color:var(--c-muted);font-size:.83rem;" data-tr="Üye" data-en="Member">Üye</span></p>
+        </div>
+
+        <!-- Disiplin Kurulu -->
+        <div style="background:white;border-radius:var(--radius);padding:2rem;border:1px solid rgba(0,0,0,.06);border-top:4px solid var(--c-purple);">
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;color:var(--c-dark);margin-bottom:1.5rem;" data-tr="Disiplin Kurulu" data-en="Disciplinary Board">Disiplin Kurulu</h3>
+          <p style="margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:var(--c-purple);flex-shrink:0;"></span><strong>Filiz Tufan EMİNİ KURTULUŞ</strong></p>
+          <p style="margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:var(--c-muted);opacity:.4;flex-shrink:0;"></span><strong>Caner ÇİMEN</strong></p>
+          <p style="display:flex;align-items:center;gap:.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:var(--c-muted);opacity:.4;flex-shrink:0;"></span><strong>Merkez UYSAL</strong></p>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>
@@ -982,30 +1013,6 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
   </div>
 </div>
 
-<!-- ============================================================
-     AUDIT PAGE
-     ============================================================ -->
-<div id="page-audit" class="page-section">
-  <div class="page-hero"><div class="container"><h1 class="section-title" data-tr="Denetim ve Disiplin Kurulları" data-en="Audit and Disciplinary Boards">Denetim ve Disiplin Kurulları</h1></div></div>
-  <div class="inner-page" style="padding-top:3rem;">
-    <div class="container" style="max-width:700px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
-        <div style="background:white;border-radius:var(--radius);padding:2rem;border:1px solid rgba(0,0,0,.06);">
-          <h3 style="font-family:var(--font-display);margin-bottom:1.5rem;" data-tr="Denetim Kurulu" data-en="Audit Board">Denetim Kurulu</h3>
-          <p style="margin-bottom:.75rem;"><strong>Ahmet MANTAŞ</strong> — <span style="color:var(--c-blue);font-size:.83rem;" data-tr="Başkan" data-en="Chair">Başkan</span></p>
-          <p style="margin-bottom:.75rem;"><strong>Hasan KART</strong> — <span style="color:var(--c-muted);font-size:.83rem;" data-tr="Üye" data-en="Member">Üye</span></p>
-          <p><strong>Tülay ŞAHİN</strong> — <span style="color:var(--c-muted);font-size:.83rem;" data-tr="Üye" data-en="Member">Üye</span></p>
-        </div>
-        <div style="background:white;border-radius:var(--radius);padding:2rem;border:1px solid rgba(0,0,0,.06);">
-          <h3 style="font-family:var(--font-display);margin-bottom:1.5rem;" data-tr="Disiplin Kurulu" data-en="Disciplinary Board">Disiplin Kurulu</h3>
-          <p style="margin-bottom:.75rem;"><strong>Filiz Tufan EMİNİ KURTULUŞ</strong></p>
-          <p style="margin-bottom:.75rem;"><strong>Caner ÇİMEN</strong></p>
-          <p><strong>Merkez UYSAL</strong></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ============================================================
      STATUTE PAGE
@@ -1760,7 +1767,7 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
         <h4 data-tr="Kurumsal" data-en="About">Kurumsal</h4>
         <ul>
           <li><a href="#" onclick="showPage('corporate');return false;" data-tr="Dernek Hakkında" data-en="About">Dernek Hakkında</a></li>
-          <li><a href="#" onclick="showPage('board');return false;"     data-tr="Yönetim Kurulu" data-en="Board">Yönetim Kurulu</a></li>
+          <li><a href="#" onclick="showPage('kurullar');return false;"   data-tr="Kurullar"       data-en="Boards">Kurullar</a></li>
           <li><a href="#" onclick="showPage('founders');return false;"  data-tr="Kurucular"      data-en="Founders">Kurucular</a></li>
           <li><a href="#" onclick="showPage('statute');return false;"   data-tr="Tüzük"          data-en="Statute">Tüzük</a></li>
           <li><a href="#" onclick="showPage('members');return false;"   data-tr="Üyelerimiz"     data-en="Members">Üyelerimiz</a></li>
