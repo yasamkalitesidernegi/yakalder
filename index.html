@@ -1189,25 +1189,68 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
      CONTACT PAGE
      ============================================================ -->
 <div id="page-contact" class="page-section">
-  <div class="page-hero"><div class="container"><span class="section-eyebrow" data-tr="İletişim" data-en="Contact">İletişim</span><h1 class="section-title" data-tr="Bize Ulaşın" data-en="Get in Touch">Bize Ulaşın</h1><p class="section-desc" style="color:rgba(255,255,255,.62);" data-tr="Sorularınız için her zaman buradayız." data-en="We are always here for your questions.">Sorularınız için her zaman buradayız.</p></div></div>
+  <div class="page-hero"><div class="container"><span class="section-eyebrow" data-tr="İletişim" data-en="Contact">İletişim</span><h1 class="section-title" data-tr="Bizimle <em>İletişime Geçin</em>" data-en="Get in <em>Touch With Us</em>">Bizimle <em>İletişime Geçin</em></h1><p class="section-desc" style="color:rgba(255,255,255,.62);" data-tr="Sorularınız, önerileriniz veya iş birliği talepleriniz için buradayız." data-en="We are here for your questions, suggestions or collaboration requests.">Sorularınız, önerileriniz veya iş birliği talepleriniz için buradayız.</p></div></div>
   <div class="inner-page" style="padding-top:3rem;">
     <div class="container">
       <div class="contact-grid">
+
+        <!-- SOL: İletişim bilgileri -->
         <div class="contact-info">
           <div class="ci"><div class="ci-icon">📍</div><div><div class="ci-label" data-tr="Adres" data-en="Address">Adres</div><div class="ci-val">Namık Kemal Mah., Helvacıoğlu Sk. No:19-21/A<br>17000 Merkez / Çanakkale</div></div></div>
           <div class="ci"><div class="ci-icon">💬</div><div><div class="ci-label">WhatsApp</div><div class="ci-val"><a href="https://wa.me/905397024400">+90 539 702 4400</a></div></div></div>
-          <div class="ci"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:yasamkalitesidernegi@gmail.com">yasamkalitesidernegi@gmail.com</a><br><a href="mailto:yasamkalitesidernegi@gmail.com">yasamkalitesidernegi@gmail.com</a></div></div></div>
+          <div class="ci"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:yasamkalitesidernegi@gmail.com">yasamkalitesidernegi@gmail.com</a></div></div></div>
           <div class="ci"><div class="ci-icon">🌐</div><div><div class="ci-label">Web</div><div class="ci-val"><a href="https://www.yakalder.org" target="_blank">www.yakalder.org</a></div></div></div>
           <div class="ci"><div class="ci-icon">🏛️</div><div><div class="ci-label" data-tr="Vergi No" data-en="Tax No">Vergi No</div><div class="ci-val">9381319291</div></div></div>
-        </div>
-        <div>
-          <div class="map-wrap">
-            <a href="https://maps.app.goo.gl/G6L7GDj75BX4bP717" target="_blank">
-              <img src="" alt="Harita" style="width:100%;height:360px;object-fit:cover;" onerror="this.parentElement.innerHTML='<iframe src=&quot;https://maps.google.com/maps?q=Çanakkale,Turkey&output=embed&quot; style=&quot;width:100%;height:360px;border:none;&quot;></iframe>'">
-            </a>
+          <div style="margin-top:2rem;">
+            <div class="map-wrap">
+              <iframe src="https://maps.google.com/maps?q=Namık+Kemal+Mah+Helvacıoğlu+Sokak+Çanakkale&output=embed" style="width:100%;height:260px;border:none;border-radius:var(--radius);" loading="lazy" title="YAKALDER Konum"></iframe>
+            </div>
+            <p style="font-size:.78rem;color:var(--c-muted);margin-top:.5rem;"><a href="https://maps.app.goo.gl/G6L7GDj75BX4bP717" target="_blank" style="color:var(--c-blue);" data-tr="Google Maps'te aç →" data-en="Open in Google Maps →">Google Maps'te aç →</a></p>
           </div>
-          <p style="font-size:.78rem;color:var(--c-muted);margin-top:.65rem;"><a href="https://maps.app.goo.gl/G6L7GDj75BX4bP717" target="_blank" style="color:var(--c-blue);" data-tr="Google Maps'te aç →" data-en="Open in Google Maps →">Google Maps'te aç →</a></p>
         </div>
+
+        <!-- SAĞ: İletişim formu -->
+        <div>
+          <div style="background:white;border-radius:var(--radius);padding:2.5rem;box-shadow:var(--shadow);">
+            <h3 style="font-family:var(--font-display);font-size:1.4rem;color:var(--c-dark);margin-bottom:1.75rem;" data-tr="Mesaj Gönderin" data-en="Send a Message">Mesaj Gönderin</h3>
+
+            <!-- Formspree ile email gönderimi — yasamkalitesidernegi@gmail.com adresine düşer -->
+            <div id="contactForm">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+                <div>
+                  <label style="display:block;font-size:.75rem;font-family:var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.4rem;" data-tr="Adınız *" data-en="First Name *">Adınız *</label>
+                  <input id="cf-firstname" type="text" placeholder="Adınız" style="width:100%;padding:.75rem 1rem;border:1.5px solid rgba(0,0,0,.12);border-radius:8px;font-family:var(--font-body);font-size:.95rem;outline:none;transition:border-color .2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--c-blue)'" onblur="this.style.borderColor='rgba(0,0,0,.12)'" required>
+                </div>
+                <div>
+                  <label style="display:block;font-size:.75rem;font-family:var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.4rem;" data-tr="Soyadınız *" data-en="Last Name *">Soyadınız *</label>
+                  <input id="cf-lastname" type="text" placeholder="Soyadınız" style="width:100%;padding:.75rem 1rem;border:1.5px solid rgba(0,0,0,.12);border-radius:8px;font-family:var(--font-body);font-size:.95rem;outline:none;transition:border-color .2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--c-blue)'" onblur="this.style.borderColor='rgba(0,0,0,.12)'" required>
+                </div>
+              </div>
+              <div style="margin-bottom:1rem;">
+                <label style="display:block;font-size:.75rem;font-family:var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.4rem;" data-tr="E-posta *" data-en="Email *">E-posta *</label>
+                <input id="cf-email" type="email" placeholder="ornek@email.com" style="width:100%;padding:.75rem 1rem;border:1.5px solid rgba(0,0,0,.12);border-radius:8px;font-family:var(--font-body);font-size:.95rem;outline:none;transition:border-color .2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--c-blue)'" onblur="this.style.borderColor='rgba(0,0,0,.12)'" required>
+              </div>
+              <div style="margin-bottom:1rem;">
+                <label style="display:block;font-size:.75rem;font-family:var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.4rem;" data-tr="Telefon" data-en="Phone">Telefon</label>
+                <input id="cf-phone" type="tel" placeholder="+90 5XX XXX XX XX" style="width:100%;padding:.75rem 1rem;border:1.5px solid rgba(0,0,0,.12);border-radius:8px;font-family:var(--font-body);font-size:.95rem;outline:none;transition:border-color .2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--c-blue)'" onblur="this.style.borderColor='rgba(0,0,0,.12)'">
+              </div>
+              <div style="margin-bottom:1rem;">
+                <label style="display:block;font-size:.75rem;font-family:var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.4rem;" data-tr="Konu *" data-en="Subject *">Konu *</label>
+                <input id="cf-subject" type="text" placeholder="Mesajınızın konusu" style="width:100%;padding:.75rem 1rem;border:1.5px solid rgba(0,0,0,.12);border-radius:8px;font-family:var(--font-body);font-size:.95rem;outline:none;transition:border-color .2s;box-sizing:border-box;" onfocus="this.style.borderColor='var(--c-blue)'" onblur="this.style.borderColor='rgba(0,0,0,.12)'" required>
+              </div>
+              <div style="margin-bottom:1.5rem;">
+                <label style="display:block;font-size:.75rem;font-family:var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.4rem;" data-tr="Mesajınız *" data-en="Message *">Mesajınız *</label>
+                <textarea id="cf-message" rows="5" placeholder="Mesajınızı buraya yazın..." style="width:100%;padding:.75rem 1rem;border:1.5px solid rgba(0,0,0,.12);border-radius:8px;font-family:var(--font-body);font-size:.95rem;outline:none;transition:border-color .2s;box-sizing:border-box;resize:vertical;" onfocus="this.style.borderColor='var(--c-blue)'" onblur="this.style.borderColor='rgba(0,0,0,.12)'" required></textarea>
+              </div>
+              <button onclick="submitContactForm()" style="width:100%;padding:1rem;background:var(--c-teal);color:white;border:none;border-radius:8px;font-family:var(--font-mono);font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .2s;" onmouseover="this.style.background='var(--c-blue)'" onmouseout="this.style.background='var(--c-teal)'">
+                <span id="cf-btn-text" data-tr="GÖNDER →" data-en="SEND →">GÖNDER →</span>
+              </button>
+              <div id="cf-success" style="display:none;margin-top:1rem;padding:1rem;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;color:#166534;font-size:.9rem;text-align:center;" data-tr="✅ Mesajınız iletildi! En kısa sürede geri döneceğiz." data-en="✅ Your message has been sent! We will get back to you soon.">✅ Mesajınız iletildi! En kısa sürede geri döneceğiz.</div>
+              <div id="cf-error" style="display:none;margin-top:1rem;padding:1rem;background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;color:#991b1b;font-size:.9rem;text-align:center;" data-tr="❌ Bir hata oluştu. Lütfen tekrar deneyin." data-en="❌ An error occurred. Please try again.">❌ Bir hata oluştu. Lütfen tekrar deneyin.</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -1352,4 +1395,67 @@ document.querySelectorAll('.dropdown > a').forEach(a => {
     }
   });
 });
+
+/* ── İLETİŞİM FORMU (Formspree) ── */
+async function submitContactForm() {
+  const firstname = document.getElementById('cf-firstname').value.trim();
+  const lastname  = document.getElementById('cf-lastname').value.trim();
+  const email     = document.getElementById('cf-email').value.trim();
+  const phone     = document.getElementById('cf-phone').value.trim();
+  const subject   = document.getElementById('cf-subject').value.trim();
+  const message   = document.getElementById('cf-message').value.trim();
+
+  // Basit doğrulama
+  if (!firstname || !lastname || !email || !subject || !message) {
+    const fields = [
+      document.getElementById('cf-firstname'),
+      document.getElementById('cf-lastname'),
+      document.getElementById('cf-email'),
+      document.getElementById('cf-subject'),
+      document.getElementById('cf-message')
+    ];
+    fields.forEach(f => {
+      if (!f.value.trim()) f.style.borderColor = '#ef4444';
+    });
+    return;
+  }
+
+  const btn = document.getElementById('cf-btn-text');
+  btn.textContent = '⏳ Gönderiliyor...';
+  document.getElementById('cf-success').style.display = 'none';
+  document.getElementById('cf-error').style.display = 'none';
+
+  try {
+    // Formspree endpoint — form ID'nizi buraya yapıştırın
+    // Kayıt için: https://formspree.io/f/xyzrabcd → kendi ID'nizle değiştirin
+    const FORMSPREE_ID = 'mlgpejek';
+
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        'Ad Soyad': `${firstname} ${lastname}`,
+        'Telefon': phone || '—',
+        'E-posta': email,
+        'Konu': subject,
+        'Mesaj': message,
+        '_replyto': email,
+        '_subject': `[YAKALDER] ${subject}`
+      })
+    });
+
+    if (res.ok) {
+      document.getElementById('cf-success').style.display = 'block';
+      // Formu temizle
+      ['cf-firstname','cf-lastname','cf-email','cf-phone','cf-subject','cf-message']
+        .forEach(id => document.getElementById(id).value = '');
+      btn.textContent = 'GÖNDER →';
+    } else {
+      throw new Error('Sunucu hatası');
+    }
+  } catch(e) {
+    document.getElementById('cf-error').style.display = 'block';
+    btn.textContent = 'GÖNDER →';
+  }
+}
 </script>
