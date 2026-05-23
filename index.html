@@ -472,6 +472,118 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
   .stats-grid      { grid-template-columns:repeat(2,1fr); }
   .btn-nav-donate  { display:none; }
 }
+  /* ============================================================
+   GENERAL ASSEMBLY POPUP
+   ============================================================ */
+.general-assembly-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(26, 26, 46, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.general-assembly-popup.is-hidden {
+  display: none;
+}
+
+.general-assembly-modal {
+  width: min(760px, 100%);
+  max-height: 88vh;
+  overflow-y: auto;
+  background: #fff;
+  color: var(--c-text);
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.25);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.general-assembly-header {
+  padding: 1.4rem 1.6rem;
+  background: linear-gradient(135deg, var(--c-blue), var(--c-teal));
+  color: #fff;
+  border-radius: 18px 18px 0 0;
+}
+
+.general-assembly-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.general-assembly-body {
+  padding: 1.6rem;
+  line-height: 1.75;
+  font-size: 0.96rem;
+}
+
+.general-assembly-body p {
+  margin-bottom: 1rem;
+}
+
+.general-assembly-body strong {
+  color: var(--c-dark);
+}
+
+.general-assembly-body ol {
+  margin: 0.75rem 0 1.25rem 1.35rem;
+}
+
+.general-assembly-body li {
+  margin-bottom: 0.45rem;
+}
+
+.general-assembly-address {
+  background: var(--c-light);
+  border-left: 4px solid var(--c-blue);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.general-assembly-footer {
+  padding: 0 1.6rem 1.6rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.general-assembly-close {
+  border: 0;
+  cursor: pointer;
+  padding: 0.85rem 1.4rem;
+  border-radius: 10px;
+  background: var(--c-dark);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.general-assembly-close:hover {
+  background: var(--c-blue);
+  transform: translateY(-1px);
+}
+
+@media(max-width: 600px) {
+  .general-assembly-popup {
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+
+  .general-assembly-body {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .general-assembly-footer {
+    padding: 0 1.2rem 1.2rem;
+  }
+}
 </style>
 </head>
 <body>
