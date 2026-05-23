@@ -636,7 +636,7 @@ footer { background:#111120;color:rgba(255,255,255,.55);padding:4rem 0 2rem; }
     </div>
 
     <div class="general-assembly-footer">
-      <button type="button" class="general-assembly-close" onclick="closeGeneralAssemblyPopup()">
+      <button type="button" class="general-assembly-close" 
         Duyuruyu Kapat
       </button>
     </div>
@@ -2139,6 +2139,36 @@ async function submitContactForm() {
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
       closeGeneralAssemblyPopup();
+    }
+  });
+</script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var popup = document.getElementById('generalAssemblyPopup');
+    var closeButton = document.querySelector('.general-assembly-close');
+
+    function closePopup() {
+      if (popup) {
+        popup.style.display = 'none';
+      }
+    }
+
+    if (closeButton) {
+      closeButton.addEventListener('click', closePopup);
+    }
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closePopup();
+      }
+    });
+
+    if (popup) {
+      popup.addEventListener('click', function (event) {
+        if (event.target === popup) {
+          closePopup();
+        }
+      });
     }
   });
 </script>
