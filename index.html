@@ -2128,5 +2128,19 @@ async function submitContactForm() {
   btn.textContent = lang === 'tr' ? 'GÖNDER →' : 'SEND →';
 }
 </script>
+  <script>
+  function closeGeneralAssemblyPopup() {
+    var popup = document.getElementById('generalAssemblyPopup');
+    if (popup) {
+      popup.classList.add('is-hidden');
+    }
+  }
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeGeneralAssemblyPopup();
+    }
+  });
+</script>
 </body>
 </html>
